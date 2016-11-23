@@ -12,6 +12,6 @@ sudo tar xvf apache-maven-3.3.9-bin.tar.gz  -C /opt
 git clone https://github.com/johanjanssen/LCC.git
 /opt/apache-maven-3.3.9/bin/mvn -f /home/pi/LCC/pom.xml clean package
 sudo sed -i '/^exit/s/^exit/\/usr\/lib\/jvm\/jdk-8-oracle-arm32-vfp-hflt\/bin\/java -jar \/home\/pi\/LCC\/target\/*.jar \& \n&/' /etc/rc.local
-gcc -lpthread control.c -o /home/pi/LCC/infrared
+gcc -lpthread /home/pi/LCCInstallScript/control.c -o /home/pi/LCCInstallScript/infrared
 /usr/lib/jvm/jdk-8-oracle-arm32-vfp-hflt/bin/java -jar /home/pi/LCC/target/*.jar
 
