@@ -1,4 +1,4 @@
-sudo apt-get update
+sudo apt-get update -y
 
 # Remove or comment one of the lines below to disable the specific functionality.
 sh /home/pi/LCCInstallScript/infraredscript.sh
