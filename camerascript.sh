@@ -5,12 +5,11 @@ echo "disable_camera_led=1" | sudo tee --append /boot/config.txt
 
 # Download RPi Cam Web Interface.
 git clone https://github.com/silvanmelchior/RPi_Cam_Web_Interface.git
-
-# Make sure the camera is accessible by the IP address. Default the camera is accessible via the 'html' subfolder. 
-sed -i -e 's/rpicamdir="html"/rpicamdir=""/g' /home/pi/RPi_Cam_Web_Interface/config.txt
-
 cd RPi_Cam_Web_Interface
 chmod u+x *.sh
+
+# Make sure the camera is accessible by the IP address. Default the camera is accessible via the 'html' subfolder. 
+sed -i -e 's/rpicamdir=\\"html\\"/rpicamdir=\\"\\"/g' /home/pi/RPi_Cam_Web_Interface/test.sh
 
 # Install RPi Cam Web Interface.
 ./install.sh q
