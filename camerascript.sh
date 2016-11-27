@@ -9,7 +9,7 @@ cd RPi_Cam_Web_Interface
 chmod u+x *.sh
 
 # Make sure the camera is accessible by the IP address. Default the camera is accessible via the 'html' subfolder. 
-sed -i -e 's/rpicamdir=\\"html\\"/rpicamdir=\\"\\"/g' /home/pi/RPi_Cam_Web_Interface/config.txt
+sed -i -e 's/rpicamdir=\\"html\\"/rpicamdir=\\"\\"/g' /home/pi/RPi_Cam_Web_Interface/install.sh
 
 # Install RPi Cam Web Interface.
 ./install.sh q
